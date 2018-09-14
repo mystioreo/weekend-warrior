@@ -11,14 +11,12 @@ describe "Word Count" do
   end
 
   it "Check counts_one_of_each" do
-    skip
     expectedCounts = { "one" => 1, "of" => 1, "each" => 1 }
 
     expect(words('one of each')).must_equal expectedCounts
   end
 
   it "Check counts multiple occurrences" do
-    skip
     expectedCounts = { "one" => 1, "fish" => 4, "two" => 1, "red" => 1, "blue" => 1 }
     expect(words('one fish two fish red fish blue fish')).must_equal expectedCounts
   end
