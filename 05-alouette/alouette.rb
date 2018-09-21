@@ -31,5 +31,18 @@ class Alouette
   end
 
   def self.sing
+    song = ""
+
+    refrain = "Alouette, gentille alouette,\nAlouette, je te plumerai."
+
+    PARTS.length.times do |i|
+      song << refrain + "\n\n"
+      song << self.verse(i) + "\n\n"
+    end
+    song << refrain
+
+    return song
   end
 end
+#
+# puts Alouette.sing
